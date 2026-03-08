@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 24px;
+}
+
+/* Glass container */
+.table-container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    color: white;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+.table-container .header{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Title */
+.todo-title {
+    font-size: 28px;
+    /* margin-bottom: 20px; */
+    /* padding: 20px 20px 0px; */
+}
+
+/* Back button */
+.table-container .header .btn {
+    display: inline-block;
+ 
+    background: white;
+    color: #764ba2;
+}
+
+.table-container .header.btn:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+/* Confirm section */
+.confirm {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* Confirm text */
+.confirm p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.confirmBtn {
+    display: flex;
+    gap: 15px;
+}
+
+.confirmBtn .btn {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+     padding: 10px 20px;
+    border-radius: 32px;
+}
+/* Common button style */
+.btn {
+    padding: 10px 20px;
+    border-radius: 32px;
+    text-decoration: none;
+    font-weight: 600;
+    width:auto;
+    transition: 0.3s ease;
+}
+
+/* YES button */
+.confirmBtn .btn:first-child {
+    background: #f44336;
+    color: white;
+}
+
+.confirmBtn .btn:first-child:hover {
+    background: #d32f2f;
+    transform: translateY(-3px);
+}
+
+/* NO button */
+.confirmBtn .btn:last-child {
+    background: #4CAF50;
+    color: white;
+}
+
+.confirmBtn .btn:last-child:hover {
+    background: #388e3c;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .confirmBtn {
+        flex-direction: column;
+    }
+
+    .confirmBtn .btn {
+        width: 100%;
+    }
+}

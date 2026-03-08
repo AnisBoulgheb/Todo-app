@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/deleteTodo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="table-container">
+        <div class="header">
+            <h2 class="todo-title">Delete <span>Todo</span></h2>
+            <a class="btn back-btn" href="/">Back</a>
+        </div>
+        <div class="confirm">
+            <p>
+                Are you sure you want delet this todo?
+            </p>
+            <div class="confirmBtn">
+                <a class="btn" href="/confirmDelete?id=<%= id %>&confirm=yes">Yes</a>
+                <a class="btn" href="/confirmDelete?id=<%= id %>&confirm=no">no</a>
+            </div>
+        </div>
+    </div>
+<%- include("partials/footer")%>

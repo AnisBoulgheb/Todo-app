@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/newTodo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header"> 
+
+        <h2 class="todo-title">Add todo</h2>
+         <a href="./" class="btn">Back</a>
+    </div>
+    <div class="table-container">
+        
+        <div>
+           
+            <form action="/newTodo" method="post">
+                <div class="new-todo">
+                    <div class="form-group">
+                        <label for="title" class="text-light">Title</label>
+                        <input type="text" name="title" value="" placeholder="type todo here">
+                    </div>
+                    <div class="form-group">
+                        <label for="desc" class="text-light">Description</label>
+                        <input type="text" name="desc" value="" placeholder="type Description here">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Save </button>
+                    </div>
+                </div>
+            </form>            
+            
+            
+        </div>
+        <br>
+
+    
+    </div>
+<%- include("partials/footer")%>

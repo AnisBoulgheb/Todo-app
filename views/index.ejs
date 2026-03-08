@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="table-container">
+        <div class="logo">
+            <img src="/image/Logo.png" alt="logo">
+        </div>
+       
+
+        <div>
+            <a  class="btn" href="./newTodo">Add todo</a>
+            
+        </div>
+    </div>
+<br>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <% for (let i=0;i<todos.length;i++){%>
+        <td><%= todos[i].title%></td>
+    <td><%= todos[i].desc %></td>
+    <td><%= moment(todos[i].createdAt).format("MMM DD, YYYY,HH:mm:ss") %></td>
+    <td><%= moment(todos[i].updatedAt).format("MMM DD, YYYY,HH:mm:ss")%></td>
+    <td >
+        <div class="btns">
+        <a class="btn" href="/updateTodo?id=<%= todos[i]._id%>">Edit</a>
+        <a class="btn" href="/deleteTodo?id=<%= todos[i]._id%>">Delete</a>
+        </div>
+    </td>
+    </tr>
+      <% }%>
+    
+</table>
+<%- include("partials/footer")%>
+
+
+
